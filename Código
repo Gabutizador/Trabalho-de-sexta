@@ -1,0 +1,69 @@
+#include <stdio.h>
+
+// Estrutura para representar os registradores do MIPS
+struct MIPSRegisters {
+    int reg[32];
+};
+
+// Função para leitura de uma instrução do MIPS
+void read_instruction(char *instruction) {
+    printf("Digite uma instrução MIPS: ");
+    scanf("%s", instruction);
+}
+
+// Função para decodificar e exibir o formato estrutural da instrução
+void decode_instruction(char *instruction) {
+    // Implemente a lógica de decodificação aqui
+    // Separe os campos da instrução e exiba os valores decimais
+    printf("Formato estrutural da instrução:\n");
+}
+
+// Função para realizar a busca de instrução (IF)
+void instruction_fetch() {
+    // Implemente a lógica de busca de instrução
+}
+
+// Função para realizar a decodificação (ID)
+void instruction_decode() {
+    // Implemente a lógica de decodificação
+}
+
+// Função para realizar a execução (EX)
+void execute_instruction() {
+    // Implemente a lógica de execução
+}
+
+// Função para realizar o acesso à memória (MEM)
+void memory_access() {
+    // Implemente a lógica de acesso à memória
+}
+
+// Função para realizar a escrita de volta (WB)
+void write_back() {
+    // Implemente a lógica de escrita de volta
+}
+
+int main() {
+    char instruction[100];
+    struct MIPSRegisters registers;
+
+    while (1) {
+        read_instruction(instruction);
+
+        if (strcmp(instruction, "exit") == 0) {
+            break;
+        }
+
+        decode_instruction(instruction);
+        instruction_fetch();
+        instruction_decode();
+        execute_instruction();
+        memory_access();
+        write_back();
+
+        // Atualize e exiba o valor do Program Counter (PC)
+        printf("Program Counter (PC) atualizado: %d\n", pc);
+    }
+
+    return 0;
+}
